@@ -1,0 +1,223 @@
+/* CSS, Project, Responsive */
+@media screen and (max-width: 1199px) and (orientation: portrait) {
+	/* Remove large-scale stuff. */
+	.large-scale {
+		display: none !important;
+	}
+	
+	/* Mobile Menu Expander */
+	#menu-expander {
+		display: block !important;
+	}
+	
+	/* Header */
+	header {
+		height: 21.7vw;
+		padding: 1.2vw;
+	}
+	
+	#header-title, header:hover #header-title.cycle-two {
+		font-size: 7.25vw;
+		letter-spacing: 0.725vw;
+	}
+	
+	#background-title, header:hover #background-title.cycle-two {
+		height: 14.5vw;
+		width: 96.6vw;
+		font-size: 10.9vw;
+		margin-top: -7.25vw;
+		margin-left: -48.3vw;
+	}
+	
+	/* Main, System Section */
+	.system-section {
+		display: flex;
+		flex-direction: column;
+		padding: 11vw 6vw 4vw;
+	}
+	
+	#myths.system-section {
+		padding-bottom: 30.2vw;
+	}
+	
+	.system-section > div {
+		margin: 2.4vw 0;
+	}
+	
+	.section-header {
+		width: 100vw;
+		top: 1.2vw;
+		left: 0;
+		margin-left: 0;
+		padding: 2.4vw 0;
+		font-size: 7.5vw;
+	}
+	
+	.section-body {
+		font-size: 5vw;
+	}
+	
+	.section-paragraph {
+		margin: 2em 0;
+	}
+	
+	/* Main, Processes Slider */ 	
+	.slider-viewport {
+		height: 77vw;
+		margin-top: -38.5vw;
+	}
+	
+	.slide {
+		height: 77vw;
+	}
+	
+	.slide img {
+		width: 100%;
+		height: auto;
+	}
+	
+	#carousel {
+		width: 100vw;
+		top: 30vw;
+		margin-left: -50vw;
+	}
+	
+	.round {
+		width: 7.25vw;
+		height: 7.25vw;
+		margin: 0 3.6vw;
+		border: 1.2vw solid white;
+		padding: 1.2vw;
+		
+	}
+	
+	.subtitles {
+		width: 100vw;
+		bottom: 30vw;
+		margin-left: -50vw;
+	}
+	
+	#slide-count {
+		font-size: 6.8vw;
+	}
+	
+	#subtitle {
+		font-size: 3.6vw;
+	}
+	
+	#closeButton {
+		height: 14.5vw;
+		top: -2vw;
+		right: 1.2vw;
+		font-size: 19vw;
+	}
+	
+	/* Main, Mythbusters */
+	#startMythbusterButton {
+		width: 48vw;
+		bottom: 6vw;
+		margin-left: -24vw;
+		border-radius: 2.4vw;
+		border: 1.2vw solid black;
+		padding: 3.6vw;
+		font-size: 7.25vw;
+	}
+	
+	#slide-myth {
+		width: 95vw;
+		font-size: 7.25vw;
+	}
+	
+	#slide-choices {
+		bottom: 3.6vw;
+		font-size: 6vw;
+	}
+	
+	.choice {
+		width: 42vw;
+		margin: 0 3.6vw;
+		border-radius: 4.8vw;
+		border: 1.2vw solid #FFD300;
+		padding: 3.6vw;
+	}
+	
+	/* Footer */
+	footer {
+		height: 37.4vw;
+	}
+	
+	#major-details {
+		height: 6vw;
+		padding: 3.6vw 0;
+		font-size: 4.8vw;
+	}
+	
+	#reference-viewport {
+		height: 24vw;
+		margin-top: -12vw;
+	}
+	
+	#reference-slider-small {
+		display: grid !important;
+		font-size: 3.86vw;
+	}
+	
+	.refslide {
+		width: 90%;
+		margin: auto;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) and (orientation: portrait) {
+	/* Header */
+	header {
+		height: 13.67vw;
+		padding: 1.3vw;
+	}
+	
+	#header-title, header:hover #header-title.cycle-two {
+		font-size: 7.8vw;
+		letter-spacing: 0.65vw;
+	}
+	
+	#background-title, header:hover #background-title.cycle-two {
+		height: 15.625vw;
+		width: 91vw;
+		margin-top: -7.8125vw;
+		margin-left: -45.5vw;
+		font-size: 11vw;
+	}
+	
+	/* Main, System Section */
+	.system-section {
+		padding: 9vw 3.255vw 4vw;
+	}
+	
+	#myths.system-section {
+		padding-bottom: 26vw;
+	}
+	
+	.section-header {
+		top: 2vw;
+		font-size: 6.5vw;
+	}
+	
+	.section-body {
+		font-size: 5.2vw;
+	}
+	
+	/* Main, Processes Slider */
+	#carousel {
+		top: 13vw;
+	}
+	
+	.subtitles {
+		bottom: 13vw;
+	}
+	
+	/* Main, Mythbusters */
+	#slide-myth {
+		font-size: 6.84vw;
+	}
+
+}

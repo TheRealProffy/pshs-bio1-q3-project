@@ -1,0 +1,533 @@
+/* CSS, Project */
+@font-face {
+	font-family: "Bebas Neue";
+	src: url("../Fonts/Bebas%20Neue.ttf");
+}
+
+@font-face {
+	font-family: "League Spartan";
+	src: url("../Fonts/League%20Spartan%20(Bold).ttf");
+}
+
+@font-face {
+	font-family: "Playlist Script";
+	src: url("../Fonts/Playlist%20Script.otf");
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("../Fonts/Montserrat%20(Regular).ttf");
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../Fonts/Roboto%20(Regular).ttf");
+}
+
+/* HTML */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+	margin: auto;
+}
+
+/* Mobile Menu Expander */
+#menu-expander {
+	position: fixed;
+	bottom: 2.4vw;
+	left: 2.4vw;
+	height: 14.5vw;
+	width: 14.5vw;
+	background: black;
+	border-radius: 50%;
+	font-family: "League Spartan";
+	font-size: 13.3vw;
+	font-weight: bold;
+	color: #FFD600;
+	text-align: center;
+	opacity: 0.6;
+	z-index: 400;
+	transition: 1s;
+}
+
+#menu-expander:hover {
+	opacity: 1;
+}
+
+/* Mobile Navigation */
+#mobile-navigation {
+	position: fixed;
+	bottom: -200vw;
+	height: 100vh;
+	width: 100vw;
+	display: grid !important;
+	background: rgba(0, 0, 0, 0.96);
+	grid-template-rows: repeat(5, 1fr);
+	color: white;
+	transition: 2s;
+}
+
+#mobile-navigation .local-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "League Spartan";
+	font-size: 10vw;
+}
+
+#mobile-navigation .active.local-link {
+	background: #FFD300;
+	color: black;
+}
+
+/* Header */
+header {
+	height: 7.7vw;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #36454F;
+	padding: 0.73vw;
+	cursor: default;
+}
+
+header:hover #header-title, #header-title.cycle-two {
+	color: rgba(0, 0, 0, 0.5);
+	z-index: 10;
+	transition-delay: 1s;
+}
+
+#header-title, header:hover #header-title.cycle-two {
+	position: relative;
+	font-family: "League Spartan";
+	font-size: 3.66vw;
+	color: rgba(255, 255, 255, 1);
+	text-transform: uppercase;
+	letter-spacing: 0.366vw;
+	z-index: 20;
+	transition: 0.5s;
+	transition-delay: 1s;
+}
+
+header:hover #background-title, #background-title.cycle-two {
+	color: rgba(255, 255, 255, 1);
+	z-index: 20;
+}
+
+#background-title, header:hover #background-title.cycle-two {
+	height: 8.78vw;
+	width: 62vw;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: -4.39vw;
+	margin-left: -31vw;
+	font-family: "Playlist Script";
+	font-size: 6.6vw;
+	color: rgba(0, 0, 0, 0.4);
+	text-transform: lowercase;
+	z-index: 10;
+	transition: 0.5s;
+	transition-delay: 1s;
+}
+
+/* Main, Navigation */
+#navigation {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	align-items: center;
+	justify-items: center;
+	background: black;
+}
+
+.local-link {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 0.73vw 0;
+	font-family: "Montserrat";
+	font-size: 1.68vw;
+	color: #FFD300;
+	text-decoration: none;
+	transition: 0.5s;
+}
+
+.local-link:hover, .local-link.active {
+	background: #FFD300;
+	font-weight: bolder;
+	color: black;
+	cursor: pointer;
+}
+
+/* Main, System Section */
+.system-section {
+	position: relative;
+	background: #3D3D3D;
+	padding: 6.22vw 1.83vw 3.66vw;
+	cursor: default;
+	transition: 1s;
+}
+
+.system-section:hover {
+	background: #2D2D2D;
+}
+
+.system-section.locked {
+	background: #1F1F1F;
+}
+
+#myths.system-section {
+	padding-bottom: 9vw;
+}
+
+.section-header {
+	width: 36.6vw;
+	position: absolute;
+	top: 1.83vw;
+	left: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: black;
+	margin-left: -20vw;
+	padding: 0.732vw;
+	font-family: "Bebas Neue";
+	font-size: 3vw;
+	color: #99FFFF;
+	text-transform: uppercase;
+}
+
+.section-body {
+	font-family: "Roboto";
+	font-size: 1.76vw;
+	color: #DADADA;
+	text-align: justify;
+}
+
+.section-paragraph {
+	margin: 1.5em 0;
+}
+
+.section-paragraph:last-child {
+	margin-bottom: 0;
+}
+
+b {
+	color: yellow;
+}
+
+.slideshow {
+	font-weight: bold;
+	color: #FF0000;
+	transition: 0.5s;
+}
+
+.slideshow:hover {
+	color: #ADD8E6;
+	cursor: pointer;
+}
+
+/* Main, Processes Slider */
+main.viewport {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: -100vw;
+	background: rgba(0, 0, 0, 0.96);
+	z-index: 500;
+	cursor: default;
+	transition: 2s;
+}
+
+.slider-viewport {
+	width: 100vw;
+	height: 34.773vw;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	margin-top: -18.3vw;
+}
+
+.slider {
+	width: 300vw;
+	position: absolute;
+	left: 0;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	transition: 1.5s;
+}
+
+.slide {
+	height: 34.773vw;;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slide img {
+	height: 100%;
+}
+
+#carousel {
+	width: 36.6vw;
+	position: absolute;
+	top: 0.732vw;
+	left: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-left: -18.3vw;
+}
+
+.round {
+	width: 2.2vw;
+	height: 2.2vw;
+	margin: 0 1.1vw;
+	border-radius: 50%;
+	border: 0.366vw solid white;
+	padding: 0.366vw;
+	transition: 0.5s;
+}
+
+.round:hover {
+	background: rgba(255, 255, 255, 0.6);
+	cursor: pointer;
+}
+
+.round.active {
+	background: white;
+	cursor: default;
+}
+
+.arrow {
+	width: 7.32vw;
+	height: 5.5vw;
+	position: absolute;
+	top: 50%;
+	background: white;
+	margin-top: -3.66vw;
+	border-radius: 50%;
+	padding-top: 1.83vw;
+	font-family: "League Spartan";
+	font-size: 3.66vw;
+	color: black;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+#prev.arrow {
+	left: 1.464vw;
+}
+
+#next.arrow {
+	right: 1.464vw;
+}
+
+.arrow:hover {
+	background: #222;
+	color: white;
+}
+
+.subtitles {
+	width: 36.6vw;
+	position: absolute;
+	left: 50%;
+	bottom: 2.2vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-left: -18.3vw;
+	font-family: "Roboto";
+	color: white;
+}
+
+#slide-count {
+	font-weight: bold;
+	font-size: 1.83vw;
+}
+
+#subtitle {
+	font-size: 1.464vw;
+}
+
+#closeButton {
+	height: 4.4vw;
+	position: absolute;
+	top: -0.6vw;
+	right: 0.366vw;
+	font-family: "League Spartan";
+	font-size: 6vw;
+	color: white;
+	transition: 0.5s;
+}
+
+#closeButton:hover {
+	color: #F2003C;
+	cursor: pointer;
+}
+
+/* Main, Mythbusters */
+#startMythbusterButton {
+	width: 14.64vw;
+	position: absolute;
+	bottom: 1.83vw;
+	left: 50%;
+	background: white;
+	margin-left: -7.32vw;
+	border-radius: 0.732vw;
+	border: 0.366vw solid black;
+	padding: 1.1vw;
+	font-family: "Montserrat";
+	font-weight: bold;
+	font-size: 2.2vw;
+	color: black;
+	outline: none;
+	transition: 0.5s;
+}
+
+#startMythbusterButton:hover {
+	background: #009F6B;
+	color: white;
+	cursor: pointer;
+}
+
+#mythbusters.viewport .slider-viewport {
+	background: #0087BD;
+	display: flex;
+	flex-direction: column;
+}
+
+#slide-myth {
+	width: 70vw;
+	margin: auto;
+	font-family: "League Spartan";
+	font-size: 3.66vw;
+	color: white;
+	text-align: center;
+}
+
+#slide-choices {
+	position: relative;
+	bottom: 4.4vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-family: "Roboto";
+	font-size: 2.56vw;
+	font-weight: bold;
+}
+
+.choice {
+	width: 11vw;
+	background: white;
+	margin: 0 7.32vw;
+	border-radius: 1.464vw;
+	border: 0.366vw solid #FFD300;
+	padding: 1.1vw;
+	color: black;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.choice:hover {
+	background: black;
+	color: white;
+}
+
+.choice.wrong {
+	background: #C40233;
+	color: white;
+	cursor: default;
+}
+
+.choice.correct {
+	background: #009F6B;
+	color: white;
+	cursor: default;
+}
+
+/* Footer */
+footer {
+	height: 16vw;
+	overflow: hidden;
+	background: #0F0F0F;
+	position: relative;
+	cursor: default;
+}
+
+#major-details {
+	height: 2.2vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.464vw 0;
+	font-family: "Roboto";
+	font-size: 1.83vw;
+	font-weight: bold;
+	color: white;
+}
+
+#reference-viewport {
+	width: 100%;
+	height: 11vw;
+	position: absolute;
+	top: 50%;
+	margin-top: -5.5vw;
+}
+
+#reference-slider-large, #reference-slider-small {
+	width: 2400%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: grid;
+	grid-template-columns: repeat(24, 1fr);
+	justify-items: center;
+	align-items: center;
+	margin: auto;
+	font-family: "Roboto";
+	font-size: 1.464vw;
+	color: white;
+}
+
+.refslide {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.arrow.ref {
+	top: auto;
+	bottom: 1.83vw;
+	margin-top: 0;
+}
+
+#next.arrow.ref {
+	right: 1.83vw;
+}
+
+#prev.arrow.ref {
+	left: 1.83vw;
+}
+
+/* Remove small-scale. */
+.small-scale {
+	display: none !important;
+}
