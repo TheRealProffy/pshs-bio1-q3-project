@@ -29,8 +29,8 @@ function automaticMovement() {
 
 function automaticMobileRef() {
 	if (window.matchMedia("(orientation: portrait)").matches) {
-		setTimeout(moveSlide, 3500, 1);
-		setTimeout(automaticMobileRef, 3500);
+		setTimeout(moveSlide, 7500, 1);
+		setTimeout(automaticMobileRef, 9500);
 	}
 }
 
@@ -229,7 +229,7 @@ function moveSlide(direction) {
 	}
 	
 	if (referenceValue == 0) {
-		referenceValue = refSlide.length;
+		referenceValue = refSlide.length/2;
 		
 		if (window.matchMedia("(orientation: landscape)").matches) {
 			refSliderL.style.transition = "8s";
@@ -240,7 +240,7 @@ function moveSlide(direction) {
 		}
 	}
 	
-	else if (referenceValue > refSlide.length) {
+	else if (referenceValue > refSlide.length/2) {
 		referenceValue = 1;
 		
 		if (window.matchMedia("(orientation: landscape)").matches) {
