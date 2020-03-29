@@ -403,6 +403,11 @@ main.viewport {
 	cursor: pointer;
 }
 
+#startMythbusterButton.deactivated {
+	background: #C40233;
+	color: white;
+}
+
 #mythbusters.viewport .slider-viewport {
 	background: #0087BD;
 	display: flex;

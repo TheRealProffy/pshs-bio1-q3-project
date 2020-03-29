@@ -149,11 +149,10 @@ function openSlider() {
 function openMythbuster() {
 	body.style.overflow = "hidden";
 	mythViewport.style.left = "0";
-	mythGenerator = Math.ceil(Math.random() * 7);
 	
 	// Avoid consecutive repetition.
 	while (mythGenerator == previousNumber) {
-		mythGenerator = Math.ceil(Math.random() * 7);
+		mythGenerator = Math.ceil(Math.random() * 8);
 	}
 	
 	previousNumber = mythGenerator;
@@ -201,10 +200,16 @@ function openMythbuster() {
 		falseButton.setAttribute("onclick", "choose('right', this)");
 	}
 	
-	else {
+	else if (mythGenerator == 7) {
 		myth.innerHTML = "A vaccine can cause a complete and full-blown disease.";
 		trueButton.setAttribute("onclick", "choose('wrong', this)");
 		falseButton.setAttribute("onclick", "choose('right', this)");
+	}
+	
+	else {
+		myth.innerHTML = "Copper kills germs.";
+		trueButton.setAttribute("onclick", "choose('right', this)");
+		falseButton.setAttribute("onclick", "choose('wrong', this)");
 	}
 	
 	choices.append(trueButton);
@@ -322,16 +327,16 @@ function closeMythbuster() {
 	body.style.overflow = "visible";
 	mythViewport.style.left = "-100vw";
 	
-	setTimeout(clearChoices, 2000);
-}
-
-function clearChoices() {
-	while (choices.firstChild) {
-		choices.removeChild(choices.lastChild);
-	}
+	setTimeout(function() {
+		while (choices.firstChild) {
+			choices.removeChild(choices.lastChild);
+		}
+	}, 2000);
 }
 
 // Choosing an Answer
+const mythbusterButton = document.getElementById("startMythbusterButton");
+
 function choose(answer, respectiveChoice) {
 	if (answer == "wrong") {
 		respectiveChoice.className = "wrong choice";
@@ -347,6 +352,15 @@ function choose(answer, respectiveChoice) {
 		decision[i].removeAttribute("onclick");
 		decision[i].style.cursor = "default";
 	}
+	
+	mythbusterButton.className = "deactivated";
+	mythbusterButton.removeAttribute("onclick");
+	
+	setTimeout(function() {
+		mythbusterButton.removeAttribute("class");
+		mythbusterButton.setAttribute("onclick", "openMythbuster()");
+	}, 3500);
+	
 }
 
 function revealCorrect(respectiveChoice) {
