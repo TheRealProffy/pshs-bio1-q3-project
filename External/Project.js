@@ -359,7 +359,7 @@ function choose(answer, respectiveChoice) {
 	setTimeout(function() {
 		mythbusterButton.removeAttribute("class");
 		mythbusterButton.setAttribute("onclick", "openMythbuster()");
-	}, 3500);
+	}, 5000);
 	
 }
 
